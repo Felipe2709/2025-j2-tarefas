@@ -8,10 +8,14 @@
     </head>
 <body>
         <h1>Tarefas</h1>
+        <a href="/tarefas/insert">Nova tarefas</a>
         <ul>
             <c:forEach var="item" items="${tarefas}">
-                <li>${item.descricao}</li>
+                <li> ${item.descricao} |  
+                <a href="/tarefas/update?id=${item.id}">Editar</a>|
+                <a href="/tarefas/delete?id=${item.id}">Remover</a>|
+                </li>
             </c:forEach>
          </ul>
-</body>
+    </body>
 </html>
